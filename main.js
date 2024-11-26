@@ -1,3 +1,4 @@
+
 const container = document.getElementById("container")
 const boxs = container.getElementsByClassName("box")
 const totalPrice= document.getElementById("total")
@@ -19,20 +20,20 @@ const price = parseInt (box.getElementsByClassName("price")[0].innerText.substri
 plus.addEventListener("click",()=> {
     quantity.value++
     total+=price
-    totalPrice.innerText= Total Price : $${total}
+    totalPrice.innerText= `TotalPrice : $${total}`
 })
 minus.addEventListener("click",()=> {
     if (quantity.value >1){
     quantity.value--
     total-=price
-    totalPrice.innerText= Total Price : $${total}
+    totalPrice.innerText= `Total Price : $${total}`
     }
 })
 deletebtn.addEventListener("click" , ()=>
 {
     box.remove()
     total-=price*quantity.value
-    totalPrice.innerText= Total Price : $${total}
+    totalPrice.innerText= `Total Price : $${total}`
 })
 
 }
